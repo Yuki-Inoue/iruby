@@ -34,6 +34,6 @@ namespace :docker do
     root_dir = File.expand_path("..", __FILE__)
     sh "docker", "run", "-it", "--rm",
        "-v", "#{root_dir}:/tmp/iruby",
-       "mrkn/iruby", "/bin/bash", "/tmp/iruby/docker-test.sh"
+       "mrkn/iruby", "/bin/bash", "/tmp/iruby/docker/test.sh"
   end
 end
