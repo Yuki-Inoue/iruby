@@ -32,6 +32,8 @@ namespace :docker do
 
   task :test do
     root_dir = File.expand_path("..", __FILE__)
-    sh "docker", "run", "-it", "--rm", "-v", "#{root_dir}:/tmp/iruby", "rubylang/ruby", "/bin/bash", "/tmp/iruby/docker-test.sh"
+    sh "docker", "run", "-it", "--rm",
+       "-v", "#{root_dir}:/tmp/iruby",
+       "mrkn/iruby", "/bin/bash", "/tmp/iruby/docker-test.sh"
   end
 end
